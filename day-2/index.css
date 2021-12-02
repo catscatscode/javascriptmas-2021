@@ -1,0 +1,107 @@
+:root {
+  --wine-red: #C7375F;
+  --bright-red: #D42D2F;
+  --dark-green: #344D2F;
+  --light-green: #77A047;
+  --gold: #FAC57D;
+  --snow: #F0F4F7;
+  --brown: #a9753e;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    flex-direction: column;
+    background-color: var(--wine-red);
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+}
+
+.container {
+    background: var(--snow);
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 3em;
+    min-width: 350px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+p {
+    font-size: 45px;
+}
+
+/* new css for toggle */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.label {
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  height: 20px;
+  width: 45px;
+}
+
+.ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 25px;
+  width: 25px;
+  transition: transform 0.2s linear;
+}
+/* end new css for toggle */
+
+.radio-container {
+    width: 200px;
+    font-size: 22px;
+}
+
+.christmas {
+    font-family: 'Mountains of Christmas', cursive;
+    color: var(--dark-green);
+    background-color: var(--wine-red);
+    background-image: url("https://images.unsplash.com/photo-1607715150652-6c4a5dd185e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-size: cover;
+}
+
+.christmas .container {
+    opacity: 90%
+}
+
+.snow {
+    font-family: 'Lobster Two', cursive;
+    color: var(--snow);
+    /* background-color: var(--snow); */
+    background-image: url("https://images.unsplash.com/photo-1513297887119-d46091b24bfa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-size: cover;
+}
+
+.snow .container {
+    color: #F0F4F7;
+    /* background-color: var(--dark-green); */
+    background-color: var(--brown);
+    opacity: 90%;
+}
